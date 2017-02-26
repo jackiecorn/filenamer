@@ -1,0 +1,87 @@
+<head>
+    <title>Filenamer</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+    <div class="container">
+        <div class='title'>
+            <h1>Filenamer</h1>
+            {{> logoutButton}}
+        </div>
+        {{> login}}
+        <div class="form {{hidden}}">
+            {{> feature}}
+                <div>
+                    <legend>Version</legend>
+                    <input type="number" id="version" min="1" value="1">
+                </div>
+
+                <div>
+                    <legend>Date</legend>
+                    <input type="text" id="datepicker">
+                    <select id="template" style="display:none;">
+                        <option id="templateOption"></option>
+                    </select>
+                </div>
+                <div class="divider"></div>
+                {{> generated}}
+        </div>
+    </div>
+</body>
+
+<template name="feature">
+    <div>
+        <legend id='featureName'>Feature Name</legend>
+        <div class="ui-widget">
+            <select id="combobox">
+                {{#each features}}
+                    <option value="{{text}}">{{text}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</template>
+
+<template name="generated">
+<div>
+    <legend>Filename</legend>
+    <input type="text" id="generatedtext" value="{{filename}}">
+    {{#unless safariHint}}
+        <div>
+            <button id="copyButton">Copy to Clipboard</button>
+        </div>
+    {{/unless}}
+    {{#if safariHint}}
+        <span class="safariHint">"Copy to Clipboard" button not supported in Safari.<br/>Use Cmd+C to copy filename.</span>
+    {{/if}}
+</div>
+</template>
+
+<template name="login">
+{{#unless currentUser}}
+  <p>
+    Sign in to generate a filename with your alias
+  </p>
+    <form id="login-form" action="action">
+        <div id="loginbox">
+            <h2>Alias</h2>
+            <input type="text" id="login-alias" placeholder="E.g. johnrat" autocomplete="off" autofocus/>
+        </div>
+        <div>
+            <input type="submit" id="login-button" value="Sign in"/>
+        </div>
+    </form>
+{{/unless}}
+</template>
+
+<template name="logoutButton">
+{{#if currentUser}}
+    <div class="logoutArea">
+        {{username}}
+        &nbsp; | &nbsp;
+        <a href="#" class="logout">Sign out</a>
+    </div>
+{{/if}}
+</template>

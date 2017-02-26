@@ -1,0 +1,272 @@
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('segoeui.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI Semibold';
+  src: url('seguisb.ttf')  format('truetype');
+}
+
+
+.ui-widget {
+    font-family: "Segoe UI", Arial,Helvetica,sans-serif;
+    color: #4D4D4D;
+}
+
+
+a {
+	line-height: 40px;
+}
+
+.ui-priority-secondary, .ui-widget-content .ui-priority-secondary, .ui-widget-header .ui-priority-secondary {
+	color: #b3b3b3;
+	opacity: 1;
+}
+
+.ui-datepicker {
+    width: 294px;
+    padding: 6px 10px;
+    border: none;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+	border-radius: 0px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+	margin: 0;
+	padding-left: 11px;
+	text-align: left;
+	font-size: 15px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default {
+	border: none;
+	background: none;
+	padding: 0px;
+	height: 40px;
+	width: 40px;
+}
+
+.ui-widget-content .ui-state-hover {
+	background: #f4f4f4;
+}
+
+
+.ui-datepicker table {
+    font-size: 12px;
+    margin: 0px;
+    }
+
+ .ui-datepicker td span, .ui-datepicker td a {
+    text-align: center;
+}
+
+.ui-datepicker td {
+    border: 0;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+}
+
+.ui-datepicker th, .ui-widget-header {
+	font-weight: normal;
+}
+
+.ui-datepicker th {
+    font-size: 10px;
+    padding: 7px 0px 10px 0px;
+}
+
+table.ui-datepicker-calendar > tbody > tr > td > a.ui-state-default.ui-state-active{
+	background: #666666;
+	color: #fff;
+  padding-left: 0px;
+	font-family: "Segoe UI", Arial,Helvetica,sans-serif;
+}
+
+.ui-widget-header {
+    border: none;
+    background: none;
+}
+
+.ui-widget-header .ui-icon {
+	background-size: 16px 16px;
+	background-position: 0px 0px;
+}
+
+.ui-widget-header .ui-icon-circle-triangle-w {
+	background-image: url("chevronupmedium.svg");
+}
+
+.ui-widget-header .ui-icon-circle-triangle-e {
+	background-image: url("chevrondownmedium.svg");
+}
+
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev {
+	top: 3px;
+	opacity: 0.3;
+}
+
+.ui-datepicker .ui-datepicker-prev {
+	left:auto;
+	right: 47px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+	left:auto;
+	right: 6px;
+}
+
+.ui-datepicker .ui-datepicker-prev-hover {
+	top: 3px;
+	right: 47px;
+	border: none;
+	background: none;
+	opacity: 0.8;
+}
+
+.ui-datepicker .ui-datepicker-next-hover {
+	top: 3px;
+	right: 6px;
+	border: none;
+	background: none;
+	opacity: 0.8;
+}
+
+
+.ui-datepicker-header .ui-state-hover {
+	background-color: transparent;
+}
+
+
+.ui-datepicker-calendar thead::after {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	content: '';
+    background-color: #F2F2F2;
+}
+
+.ui-datepicker table {
+	width: 294px;
+	height: 244px;
+}
+
+.ui-widget .ui-widget {
+  font-size: 14px;
+  font-family: "Segoe UI Semilight", Arial, Helvetica, sans-serif;
+}
+
+.custom-combobox-input {
+    border: 1px solid #C8C8C8;
+    border-radius: 0;
+    padding: 7px 8px;
+    outline: none;
+    color: #444444;
+    font-size: 14px;
+    margin-bottom: 16px;
+    font-family: "Segoe UI Semilight", Arial, Helvetica, sans-serif;
+    -webkit-appearance: none;
+    transition: border 250ms linear;
+    width: 50%;
+    height: auto;
+    width: 250px;
+}
+
+.custom-combobox-input::-ms-clear {
+    display: none;
+}
+
+.custom-combobox-input:hover {
+  border-color: #666666;
+}
+
+.custom-combobox-input:focus {
+  border-color: #666666;
+}
+
+.ui-corner-right, .ui-corner-br {
+  border-radius: 0px;
+}
+
+.ui-state-active {
+    outline: none;
+}
+
+.ui-button:hover {
+  opacity: 0.6;
+}
+
+a.ui-button.ui-widget.ui-button-icon-only.custom-combobox-toggle.ui-corner-right {
+  position: absolute;;
+  left: 290px;
+  height: 35px;
+  width: 35px;
+  background-image: url("chevrondownmedium.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: center;
+  opacity: 0.5;
+}
+
+a:active {
+  outline: none;
+}
+
+
+.ui-state-default .ui-icon {
+  background-image: url("chevrondownmedium.svg");
+}
+
+.ui-menu-item {
+  font-family: "Segoe UI Semilight", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.ui-menu-item-wrapper {
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.ui-widget-content .ui-state-active {
+  background: #EAEAEA;
+  color: #666;
+  padding-left: 8px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: #c8c8c8;
+  border-right-color: #c8c8c8;
+}
+
+ul#ui-id-1.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content {
+  border-color: #c8c8c8;
+  /*box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);*/
+  width: 264px;
+}
+
+.ui-datepicker-title select.ui-datepicker-month, .ui-datepicker-title select.ui-datepicker-year, option, #template {
+  font-family: "Segoe UI", Arial,Helvetica,sans-serif;
+  font-size: 15px;
+  color: #4D4D4D;
+  opacity: 0.8;
+  width: auto;
+  background-color: transparent;
+  -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   border: none;
+}
+
+.ui-datepicker-title select.ui-datepicker-month {
+  padding-right: 4px;
+}
+
+.ui-datepicker-title select.ui-datepicker-month:hover, .ui-datepicker-title select.ui-datepicker-year:hover {
+  opacity: 1;
+}
+
+.ui-datepicker-title select.ui-datepicker-month:focus, .ui-datepicker-title select.ui-datepicker-year:focus {
+  outline:none;
+}

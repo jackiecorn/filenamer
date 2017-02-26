@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('segoeui.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Segoe UI Semibold';
+    src: url('seguisb.ttf') format('truetype');
+}
+.hidden {
+    display: none;
+}
+* {
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    color: #666;
+}
+body {
+    background-color: #F4F4F4;
+    -webkit-font-smoothing: antialiased;
+}
+.container {
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px 60px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s;
+}
+
+.container:hover {
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+    margin-bottom: 8px;
+}
+h1 {
+    display: inline;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+p {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
+
+.form {
+    margin-top: 32px;
+}
+
+#login-form {
+  margin-bottom: 24px;
+}
+
+.logoutArea {
+    float: right;
+    font-size: 14px;
+    position: relative;
+    top: -4px;
+}
+a {
+    color: #3B78FF;
+    font-size: 14px;
+    text-decoration: none;
+}
+a:hover {
+    color: #0045FF;
+}
+legend {
+    margin-bottom: 8px;
+    padding: 0px;
+    font-size: 14px;
+    /*font-family: "Segoe UI Semibold", Arial,Helvetica,sans-serif;*/
+}
+input[type=text], input[type=number] {
+    border: 1px solid #C8C8C8;
+    border-radius: 0;
+    padding: 7px 8px;
+    outline: none;
+    color: #444444;
+    font-size: 14px;
+    font-family: "Segoe UI Semilight", Arial, Helvetica, sans-serif;
+    -webkit-appearance: none;
+    margin-bottom: 16px;
+    transition: border 250ms linear;
+}
+input[type=text]:hover, input[type=number]:hover {
+    border-color: #666666;
+}
+;
+input[type=text]:focus, input[type=number]:focus, input[type=text]:active, input[type=number]:active {
+    border-color: #F2C811;
+}
+;
+input[type=text]::-webkit-input-placeholder {
+    color: #C8C8C8;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+#datepicker {
+    width: 120px;
+    margin-bottom: 0px;
+}
+#version {
+    width: 50px;
+}
+button, input[type=submit] {
+  background: #666;
+    color: #f4f4f4;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    min-width: 120px;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+button:hover, input[type=submit]:hover {
+    background: #888;
+}
+button:active, input[type=submit]:active {
+  background: #a6a6a6;
+  color: #f4f4f4;
+}
+.copied, .copied:hover {
+    background-color: #EAEAEA;
+    color: #A6A6A6;
+}
+input[type=radio] {
+    display: none;
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 24px;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 2px;
+}
+label:before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    box-sizing: border-box;
+    border-color: #666666;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+}
+input[type=radio]:checked+ label:before {
+    pointer-events: none;
+    position: absolute;
+    box-sizing: border-box;
+    border-color: #666666;
+    background-color: #333333;
+    box-shadow: 0 0 0 2px #fff inset;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+}
+select#combobox {
+    background-color: #FFFFFF;
+    color: #444444;
+    width: 268px;
+    padding: 10px 15px;
+    font-size: 12px;
+    border: 1px solid #C8C8C8;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    outline: none;
+    margin-bottom: 0px;
+    background: url("chevrondownmedium.svg");
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    width: 100%;
+}
+select:hover {
+    border-color: #666666;
+}
+select:focus, select:active {
+    border-color: #666666;
+}
+#generatedtext {
+    width: 95%;
+    color: #666666;
+    font-family: "Segoe UI Semibold", Arial, Helvetica, sans-serif;
+}
+.divider {
+    width: 100%;
+    background-color: #e5e5e5;
+    height: 1px;
+    margin: 32px 0px;
+}
+ul {
+    padding: 0px;
+    margin-top: 4px;
+    margin-bottom: 14px;
+}
+li {
+    list-style: none;
+    /*display: inline;*/
+}
+.featureItem {
+    margin-bottom: 10px;
+}
+.delete {
+    /*float:right;*/
+    background-color: transparent;
+    font-size: 20px;
+    padding: 0px;
+    min-width: 0px;
+    position: absolute;
+    right: 65px;
+    line-height: 14px;
+}
+.delete:hover {
+    background-color: transparent;
+    opacity: 0.7;
+}
+.featureText {
+    font-size: 14px;
+    color: #666666;
+}
+#featureInput {
+    width: 95%;
+}
+#datepicker:focus, #version:focus, #generatedtext:focus, #featureInput:focus, #login-alias:focus {
+    border-color: #666666;
+}
+
+span.safariHint {
+  font-size: 13px;
+  color: #888888;
+}
+
+#loginbox {
+    margin-top: 32px;
+    margin-bottom: 0px;
+}
+
+#login-alias {
+    width: 240px;
+}
+
+#copyButton {
+  width: 100%;
+}
