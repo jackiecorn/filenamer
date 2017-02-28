@@ -86,6 +86,9 @@ Template.login.events({
 		e.preventDefault();
 		var alias = $('#login-alias').val();
 		var password = '123123';
+		if(alias.includes('@microsoft.com')){
+			alias = alias.replace('@microsoft.com','');
+		}
 		Meteor.loginWithPassword(alias, password, function(err) {
 			if (err) {
 				if (err.reason == "User not found") {
@@ -116,21 +119,6 @@ Template.logoutButton.events({
 
 Template.generated.helpers({
 	filename() {
-		if (Session.get('featureName') === undefined) {
-			if (Meteor.user()) {
-				if (Features.find({
-						owner: Meteor.user()._id
-					}).count() > 0) {
-					Session.set('featureName', Features.find({
-						owner: Meteor.user()._id
-					}, {
-						sort: {
-							text: 1
-						}
-					}).fetch()[0].text);
-				}
-			}
-		}
 		var featureName = Session.get("featureName");
 		var versionNumber = Session.get("versionNumber");
 		var date = Session.get("date");
@@ -201,7 +189,7 @@ Template.feature.events({
 function addFeature(){
 	var text = $('.custom-combobox-input').val();
 	if (text !== '') {
-		if(Features.find({text:text}).fetch().length===0){
+		if(Features.find({text:text,owner:Meteor.userId()}).fetch().length===0){
 		Features.insert({
 			text: text,
 			owner: Meteor.userId(),
