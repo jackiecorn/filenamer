@@ -289,5 +289,5 @@ $( function() {
     });
 
     $( "#combobox" ).combobox();
-		$("#generatedtext").focus(function() { $(this).select(); } );
+		$("#generatedtext").click(function() { $(this).select(); } );
   } );

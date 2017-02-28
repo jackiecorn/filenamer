@@ -206,6 +206,7 @@ select:focus, select:active {
     width: 95%;
     color: #666666;
     font-family: "Segoe UI Semibold", Arial, Helvetica, sans-serif;
+    margin-bottom: 8px;
 }
 .divider {
     width: 100%;
@@ -250,9 +251,31 @@ li {
     border-color: #666666;
 }
 
+.infoBox {
+  background-color: #E6E6E6;
+  color: #666;
+  padding: 6px 9px;
+  position: relative;
+  height: 38px;
+}
+
+.infoIcon {
+  display: inline-block;
+  background-image: url("info.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  width:18px;
+  height:18px;
+  background-position: 0px 0px;
+
+}
+
 span.safariHint {
-  font-size: 13px;
-  color: #888888;
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  left: 34px;
+  top: 5px;
 }
 
 #loginbox {

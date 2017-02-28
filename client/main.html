@@ -54,7 +54,10 @@
         </div>
     {{/unless}}
     {{#if safariHint}}
-        <span class="safariHint">"Copy to Clipboard" button not supported in Safari.<br/>Use Cmd+C to copy filename.</span>
+      <div class='infoBox'>
+        <span class='infoIcon'></span>
+        <span class="safariHint">Copy to Clipboard button not supported on Safari.<br/>Use Cmd+C to copy filename.</span>
+      </div>
     {{/if}}
 </div>
 </template>
