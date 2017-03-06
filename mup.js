@@ -3,14 +3,9 @@ module.exports = {
     one: {
       host: '52.175.221.181',
       username: 'azureuser',
-      // pem:
       password: 'Azurepassword.'
-      // or leave blank for authenticate from ssh-agent
     }
   },
-  "setupMongo": false,
-  "setupNode": true,
-  "enableUploadProgressBar": true,
 
   meteor: {
     name: 'filenamer',
@@ -27,7 +22,7 @@ module.exports = {
       MONGO_URL: 'mongodb://admin:admin@ds058369.mlab.com:58369/filenamer'
     },
     dockerImage: 'abernix/meteord:base',
-    //dockerImage: 'kadirahq/meteord'
-    deployCheckWaitTime: 60
+    deployCheckWaitTime: 60,
+    enableUploadProgressBar: true
   }
 };
