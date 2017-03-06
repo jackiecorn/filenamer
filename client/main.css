@@ -290,3 +290,7 @@ span.safariHint {
 #copyButton {
   width: 100%;
 }
+
+.hide > .custom-combobox > a {
+  display:none;
+}

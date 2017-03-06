@@ -168,6 +168,15 @@ Template.feature.helpers({
 				}
 			});
 		}
+	},
+	noFeatures() {
+		if (Meteor.user()) {
+			if(Features.find({owner: Meteor.user()._id}).fetch().length>0) {
+				return false;
+			} else {
+				return true;
+			}
+		}
 	}
 });
 

@@ -34,7 +34,7 @@
 <template name="feature">
     <div>
         <legend id='featureName'>Feature Name</legend>
-        <div class="ui-widget">
+        <div class="ui-widget {{#if noFeatures}}hide{{/if}}">
             <select id="combobox">
                 {{#each features}}
                     <option value="{{text}}">{{text}}</option>
